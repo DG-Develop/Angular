@@ -1,0 +1,20 @@
+
+
+# Ignorar archivos de cada subproyecto Angular respetando sus .gitignore individuales
+/fundamentos-angular/node_modules/
+/fundamentos-angular/dist/
+/fundamentos-angular/.idea/
+/fundamentos-angular/.vscode/
+/fundamentos-angular/*.log
+
+/my-first-project/node_modules/
+/my-first-project/dist/
+/my-first-project/.idea/
+/my-first-project/.vscode/
+/my-first-project/*.log
+
+/my-store/node_modules/
+/my-store/dist/
+/my-store/.idea/
+/my-store/.vscode/
+/my-store/*.log

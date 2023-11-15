@@ -1,0 +1,61 @@
+.box {
+  height: 200px;
+  width: 200px;
+  overflow-y: auto;
+  background-color: lightcoral;
+}
+
+.products--grid {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.message-error{
+  background: crimson;
+  color: white;
+  opacity: 0;
+  transition:  all linear .5s;
+
+  &.invalid{
+    opacity: 1;
+  }
+}
+
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+
+  &.invalid{
+    border-color: crimson;
+  }
+
+  &.valid{
+    border-color: palegreen;
+  }
+}
+
+.styles{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+@media screen and (min-width: 40em) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+}

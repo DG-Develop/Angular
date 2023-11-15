@@ -1,0 +1,33 @@
+<!-- <p>La cantidad {{myShopingCart.length}}</p>
+<p>Total $ {{total}}</p>
+<p>Today: {{today | date: 'short'}}</p>
+<p>TimeAgo: {{date | timeAgo}}</p>
+<p>Other date: {{date | date: 'yyyy...dd...MMMM'}}</p>
+
+<p>
+  {{'hOLA BasCVASas' | uppercase}}
+</p> -->
+<!-- <button (click)="createNewProduct()">create</button>
+<button (click)="onShowDetail('121212')">detalle not found</button> -->
+<div class="products--grid">
+  <app-product [product]="product" (addedProduct)="onAddToShopingCart($event)"
+    (showProduct)="onShowDetail($event)" *ngFor="let product of products"></app-product>
+    <button (click)="onClikMore()">Load more</button>
+</div>
+
+<div class="product-detail" [class.active]="showProductDetail">
+  {{ statusDetail }}
+  <div *ngIf="productChosen">
+    <button (click)="toogleProductDetail()">Close</button>
+    <h1>{{productChosen.title}}</h1>
+    <swiper-container>
+      <swiper-slide *ngFor="let img of productChosen.images">
+        <img [src]="img" alt="">
+      </swiper-slide>
+    </swiper-container>
+    <p>{{productChosen.description}}</p>
+    <button (click)="updateProduct()">editar</button>
+    <button (click)="deleteProduct()">delete</button>
+  </div>
+
+</div>
